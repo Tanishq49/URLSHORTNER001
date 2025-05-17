@@ -1,4 +1,10 @@
-const nanoid = require('nanoid'); //Fixed
+// const nanoid = require('nanoid'); //Fixed
+ let nanoid
+    module.exports.createID = async () => {
+      if (!nanoid) ({ nanoid } = await import('nanoid'))
+      return nanoid() // => "V1StGXR8_Z5jdHi6B-myT"
+    }
+
 const Url = require('../models/url.js');
 
 function formatUrl(url) {
