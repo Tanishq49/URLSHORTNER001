@@ -1,4 +1,4 @@
-const { nanoid } = require('nanoid');
+const nanoid = require('nanoid');
 const Url = require('../models/url.js');
 
 function formatUrl(url) {
