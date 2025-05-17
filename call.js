@@ -1,9 +1,11 @@
-const app = require('../api/server.js');
+const express = require('express')
+const app = express();
+const server = require('../api/server.js');
 const dotenv = require('dotenv');
 
 dotenv.config()
 
 
-app.listen(process.env.PORT,()=>{
+server.listen(process.env.PORT,()=>{
     console.log(`Server is running on http://localhost:${process.env.PORT}`)
 })
