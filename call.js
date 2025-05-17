@@ -1,9 +1,7 @@
-const app = require('./api/server.js');
+const app = require('../api/server.js');
 const dotenv = require('dotenv');
 
-dotenv.config({
-    path:"./.env",
-})
+dotenv.config()
 
 
 app.listen(process.env.PORT,()=>{
