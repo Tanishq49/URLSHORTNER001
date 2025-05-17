@@ -30,9 +30,7 @@ app.set("views", "./views");
 app.use('/generate', restrictToLoggedinUsersOnly);
 app.use('/id/:id', restrictToLoggedinUsersOnly);
 
-dotenv.config({
-    path: './.env',
-})
+dotenv.config()
 
 app.get('/', index);
 
