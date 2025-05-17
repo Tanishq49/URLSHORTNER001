@@ -1,11 +1,11 @@
-// const app = require('./api/server.js');
-// const dotenv = require('dotenv');
+const app = require('./api/server.js');
+const dotenv = require('dotenv');
 
-// dotenv.config({
-//     path:"./.env",
-// })
+dotenv.config({
+    path:"./.env",
+})
 
 
-// app.listen(process.env.PORT,()=>{
-//     console.log(`Server is running on http://localhost:${process.env.PORT}`)
-// })
+app.listen(process.env.PORT,()=>{
+    console.log(`Server is running on http://localhost:${process.env.PORT}`)
+})
