@@ -8,4 +8,4 @@ app.get('/',(req,res)=>{
 })
 
 // module.exports = router;
-module.exports = rapp;
+module.exports = app;
