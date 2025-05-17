@@ -1,5 +1,4 @@
 //Requiring Dependences....
-// const express = require('express');
 const app = require('../call.js');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser'); //for parsing cookies
@@ -48,4 +47,7 @@ app.get('/user/signin', userRoute);
 app.post('/user/login', loginRoute);
 app.get('/user/login', loginRoute);
 
-module.exports = app;
+app.listen(process.env.PORT,()=>{
+console.log(`App is running on http://localhost${process.env.PORT}`);
+}
+           
