@@ -4,19 +4,19 @@ const app = express();
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser'); //for parsing cookies
 
-const connectDB = require('./connection.js'); //requring mongoDB connection file(contains connection function)
+const connectDB = require('../connection.js'); //requring mongoDB connection file(contains connection function)
 
 //Middlewares
-const logsCounter = require('./middlewares/logsCounter.js');
-const jsonPlug = require('./middlewares/jsonPlug.js');
-const restrictToLoggedinUsersOnly = require('./middlewares/auth.js');
+const logsCounter = require('../middlewares/logsCounter.js');
+const jsonPlug = require('../middlewares/jsonPlug.js');
+const restrictToLoggedinUsersOnly = require('../middlewares/auth.js');
 
 //Routes
-const index = require('./routes/index.js');
-const url = require('./routes/url.js');
-const redirect = require('./routes/redirect.js');
-const userRoute = require('./routes/user.js');
-const loginRoute = require('./routes/login.js');
+const index = require('../routes/index.js');
+const url = require('../routes/url.js');
+const redirect = require('../routes/redirect.js');
+const userRoute = require('../routes/user.js');
+const loginRoute = require('../routes/login.js');
 
 connectDB();//Connection to mongoDB database
 
@@ -48,6 +48,4 @@ app.get('/user/signin', userRoute);
 app.post('/user/login', loginRoute);
 app.get('/user/login', loginRoute);
 
-app.listen(process.env.PORT, () => {
-    console.log(`App is listening on http//localhost:${process.env.PORT}`);
-})
+module.exports = app;
