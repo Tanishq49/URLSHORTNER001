@@ -1,5 +1,7 @@
 //Requiring Dependences............
-const app = require('../call.js');
+// const app = require('../call.js');
+const express = require('express');
+const app = express();
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser'); //for parsing cookies
 
