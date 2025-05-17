@@ -13,7 +13,7 @@ const jsonPlug = require('../middlewares/jsonPlug.js');
 const restrictToLoggedinUsersOnly = require('../middlewares/auth.js');
 
 //Routes
-const index = require('../routes/index.js');
+const index = require('../routes/home.js');
 const url = require('../routes/url.js');
 const redirect = require('../routes/redirect.js');
 const userRoute = require('../routes/user.js');
