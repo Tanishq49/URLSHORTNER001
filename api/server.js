@@ -29,6 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static('views'))
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 // app.set('views', path.join(__dirname, '../views')); 
 app.set("views", "./views");
 app.use('/generate', restrictToLoggedinUsersOnly);
