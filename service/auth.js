@@ -1,9 +1,7 @@
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
-dotenv.config({
-    path: './.env'
-});
+dotenv.config();
 
 function setUser(user) {
     return jwt.sign({
